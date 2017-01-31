@@ -10,6 +10,7 @@ import com.stuypulse.frc2017.robot.subsystems.Drivetrain;
 import com.stuypulse.frc2017.robot.subsystems.GearPusher;
 import com.stuypulse.frc2017.robot.subsystems.GearTrap;
 import com.stuypulse.frc2017.robot.subsystems.Shooter;
+import com.stuypulse.frc2017.util.Vector;
 
 import edu.wpi.cscore.CvSink;
 import edu.wpi.cscore.UsbCamera;
@@ -34,6 +35,7 @@ public class Robot extends IterativeRobot {
     public static GearTrap geartrap;
     public static Shooter shooter;
     public static Blender blender;
+    public static Vector[] cvVector;
 
     public static OI oi;
 
