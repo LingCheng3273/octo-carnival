@@ -4,6 +4,7 @@ package com.stuypulse.frc2017.robot;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 
+import com.stuypulse.frc2017.robot.cv.BoilerVision;
 import com.stuypulse.frc2017.robot.cv.Camera;
 import com.stuypulse.frc2017.robot.subsystems.Blender;
 import com.stuypulse.frc2017.robot.subsystems.Drivetrain;
@@ -45,6 +46,8 @@ public class Robot extends IterativeRobot {
     UsbCamera boilerCamera;
     UsbCamera liftCamera;
 
+    public static BoilerVision boilerVision;
+
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -55,6 +58,7 @@ public class Robot extends IterativeRobot {
         shooter = new Shooter();
         blender = new Blender();
         oi = new OI();
+        boilerVision = new BoilerVision();
         // chooser.addDefault("Default Auto", new ExampleCommand());
         // chooser.addObject("My Auto", new MyAutoCommand());
         SmartDashboard.putData("Auto mode", chooser);
